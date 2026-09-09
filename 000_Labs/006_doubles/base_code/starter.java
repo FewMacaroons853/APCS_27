@@ -10,7 +10,10 @@ class starter {
 		// the string "I love to learn coding remotely." will appear in
 		// the command window when you compile and run this program.
 		
-		
-		System.out.print(); 
+
+		double f = (97.7);
+		double c = (f/1.8);
+
+		System.out.println("The Celsius value for " + f + " degrees Farenheit is " + c + " degrees.");
 	}
 }
