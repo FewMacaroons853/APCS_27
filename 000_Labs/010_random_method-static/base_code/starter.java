@@ -11,7 +11,7 @@ class starter {
 		int x = (int) (Math.random() * 10);
 		int y = (int) (Math.random()* 101);
 		double z = 2.5+Math.random()*1.0; 
-		double c = 14 + Math.random()*535;
+		double c = 14 + Math.random()*575;
 		System.out.println(x);
 		System.out.println(y); 
 		System.out.println(z);
