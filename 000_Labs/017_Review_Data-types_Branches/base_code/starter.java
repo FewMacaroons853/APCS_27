@@ -37,46 +37,91 @@ class starter {
 		int totalpoints = 20;
 		System.out.print("Strength (1-10): ");
 		int Str = sc.nextInt();
-		if(Str >= totalpoints){
-			System.out.println("Please input a smaller value. Strength (1-10): ");
-		}
 		int pointstr = (totalpoints-Str);
-		System.out.println("You have "+pointstr+" points left.");
+		if(Str >= totalpoints){
+			System.out.print("Please input a smaller value. Strength (1-10): ");
+			Str = sc.nextInt();
+			pointstr = (totalpoints-Str);
+			System.out.println("You have "+pointstr+" points left.");
+		}
+		else if (Str <= totalpoints){
+			System.out.println("You have "+pointstr+" points left.");
+		}
 		
+		
+		
+
+
 		System.out.println("");
 		System.out.print("Dexterity (1-10): ");
 		int dex = sc.nextInt();
-		if(dex >= pointstr){
-			System.out.println("Please input a smaller value. Strength (1-10): ");
+		int pointdex = (pointstr-dex);
+		if(dex >= pointdex){
+			System.out.print("Please input a smaller value. Dexterity (1-10): ");
+			dex = sc.nextInt();
+			pointdex = (pointstr-dex);
+			System.out.println("You have "+pointdex+" points left.");
 		}
-		int pointdex = (pointstr-Str);
-		System.out.println("You have "+pointdex+" points left.");
+		else if (dex <= pointstr){
+			System.out.println("You have "+pointdex+" points left.");
+		}
+		
+
 
 		System.out.println("");
 		System.out.print("Intelligence (1-10): ");
 		int intel = sc.nextInt();
-		if(intel >= pointdex){
-			System.out.println("Please input a smaller value. Intelligence (1-10): ");
+		int pointint = (pointdex-intel);
+		if(intel >= pointint){
+			System.out.print("Please input a smaller value. Intelligence (1-10): ");
+			intel = sc.nextInt();
+			pointint = (pointdex-intel);
+			System.out.println("You have "+pointint+" points left.");
 		}
-		int pointint = (pointdex-Str);
-		System.out.println("You have "+pointint+" points left.");
+		else if (intel <= pointdex){
+			System.out.println("You have "+pointint+" points left.");
+		}
+		
+		
 
 		System.out.println("");
 		System.out.print("Constitution (1-10): ");
 		int con = sc.nextInt();
-		if(con >= pointint){
+		int pointcon = (pointint-con);
+		if(con >= pointcon){
 			System.out.println("Please input a smaller value. Constituiton (1-10): ");
+			con = sc.nextInt();
+			pointcon = (pointint-con);
+			System.out.println("You have "+pointcon+" points left.");
 		}
-		int pointcon = (pointint-Str);
-		System.out.println("You have "+pointcon+" points left.");
+		else if (con <= pointint){
+			System.out.println("You have "+pointcon+" points left.");
+		}
+		
 
 		System.out.println("");
 		System.out.print("Charisma (1-10): ");
 		int cha = sc.nextInt();
-		if(cha >= pointcon){
+		int pointcha = (pointcon-cha);
+		if(cha >= pointcha){
 			System.out.println("Please input a smaller value. Charisma (1-10): ");
+			cha = sc.nextInt();
+			pointcha = (pointcon-cha);
+			System.out.println("You have "+pointcha+" points left.");
 		}
-		int pointcha = (pointcon-Str);
-		System.out.println("You have "+pointcha+" points left.");
+		else if (cha <= pointcon){
+			System.out.println("You have "+pointcha+" points left.");
+		}
+
+		System.out.println("--------------------------------------");
+		System.out.println("You are " + name + ", the " + title + " of CVHS.");
+		System.out.println("You're a " + ans + " with the following stats!");
+		System.out.println("Strength: " + Str);
+		System.out.println("Dextrity: " + dex);
+		System.out.println("Intelligence: " + intel);
+		System.out.println("Charisma: " + cha);
+
+		System.out.println("");
+		System.out.println("Good luck on your quest " + name +"!");
 	}
 }
