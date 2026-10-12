@@ -23,13 +23,13 @@ public class starter {
         }
 
         
-
+        int x = 0;
         if (x == 0) {
             System.out.println("x is zero!");
         }
-        int x = 0;
+       
 
-        int number = 100;
+        number = 100;
         System.out.println("Final number: " + number);
     }
 }
