@@ -15,6 +15,37 @@ class starter {
 	// The goal of the third method is to check if 3 numbers are consecutive. 15 16 17 are consecutive. It will print if they are or not.
 	// Assume that the first number is always the smallest and the third number is always the largest.
 
+	public static boolean isLeapYear(int a){
+		boolean year = false;
+		if(a%4==0 && a%100!=0){
+			year = true;
+		}
+		else if (a%400==0){
+			year = true;
+		}
+		return year;
+	}
+	public static int getDigitSum(int number){
+		
+		int sum = 0;
+	
+		while(number > 0){
+			sum += number % 10;
+			number /= 10;
+		}
+		return sum;
+	}
+		public static boolean printIfConsecutive(int num1, int num2, int num3){
+			if(num1 + 1 == num2 && num1 + 2 == num3){
+				return true;
+			}
+			else if(num3 - 1 == num2 && num3 - 2 == num1 ){
+				return true;
+			}
+			else{
+				return false;
+			}
+	}
 	public static void main(String args[]) {
 		System.out.println("----------------------------------------");
 		Scanner sc = new Scanner(System.in);
@@ -26,6 +57,7 @@ class starter {
 		else
 			System.out.println(year + " is not a leap year!");
 
+
 		System.out.println();
 		System.out.println("----------------------------------------");
 		System.out.println("Enter a 5 digit number");
@@ -33,7 +65,7 @@ class starter {
 		int sum = getDigitSum(number);
 		System.out.println();
 		System.out.println("The sum of the digits of " + number + " is " + sum);
-
+		
 		System.out.println();
 		System.out.println("----------------------------------------");
 		System.out.println("Enter a number");
@@ -43,8 +75,14 @@ class starter {
 		System.out.println("Enter a number");
 		int num3 = sc.nextInt();
 		System.out.println();
-		printIfConsecutive(num1, num2, num3);
-		System.out.println();
+		boolean chicken = printIfConsecutive(num1, num2, num3);
+		if(chicken){
+			System.out.println("These numbers are consecutive");
+		}
+		else{
+			System.out.println("These numbers are not not consecutive");
+		}
+			
 		System.out.println("----------------------------------------");
-	}
+		}
 }
