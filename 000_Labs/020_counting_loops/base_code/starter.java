@@ -22,7 +22,7 @@ class starter {
 
 		while (count<amount){
 			System.out.println(name);
-			count += 1;
+			count ++;
 		}
 
 
