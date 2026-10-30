@@ -24,7 +24,43 @@ class starter {
 
 	public static void main(String args[]) {
 		// Your code goes below here
-		PooleDwarf test = new PooleDwarf();
+		PooleDwarf zero = new PooleDwarf(randName(), (int)(Math.random()*90) + 1);
+		PooleDwarf one = new PooleDwarf(randName(), (int)(Math.random()*90) + 1);
+		PooleDwarf two = new PooleDwarf(randName(), (int)(Math.random()*90) + 1);
+		PooleDwarf three = new PooleDwarf(randName(), (int)(Math.random()*90) + 1);
+		PooleDwarf four = new PooleDwarf(randName(), (int)(Math.random()*90) + 1);
+		PooleDwarf five = new PooleDwarf(randName(), (int)(Math.random()*90) + 1);
+		PooleDwarf six = new PooleDwarf(randName(), (int)(Math.random()*90) + 1);
+
+		String firstName = zero.getName();
+		int duplicates = 0;
+
+		if(zero.isSameName(one.getName())){
+			duplicates++;
+		}
+		if(zero.isSameName(two.getName())){
+			duplicates++;
+		}
+		if(zero.isSameName(three.getName())){
+			duplicates++;
+		}
+		if(zero.isSameName(four.getName())){
+			duplicates++;
+		}
+		if(zero.isSameName(five.getName())){
+			duplicates++;
+		}
+		if(zero.isSameName(six.getName())){
+			duplicates++;
+		}
 		
+		System.out.println(firstName + " was the name!");
+		System.out.println("");
+		if(duplicates>0){
+			System.out.println("There are " + duplicates + " name(s) that match!");
+		}
+		else{
+			System.out.println("There are no matches");
+		}
 	}
 }
